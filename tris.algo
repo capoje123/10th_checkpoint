@@ -1,0 +1,25 @@
+ALGORITHM algorithm_name
+    VAR
+    tab: ARRAY_OF Integer;
+    i,j,n,temp:Integer;
+
+    BEGIN
+        Write("donner la taille du tableau");
+        Read(n);
+        FOR i FROM 0 TO n STEP 1  DO
+            Write ("entrer des valeurs pour remplir le tableau");
+            Read(tab[i]);
+        END_FOR
+        FOR i FROM 1 TO n STEP 1  DO
+            temp:=tab[i];
+            j:=i-1
+            WHILE (temp<tab[j]& j>=0 ) DO
+                tab[j+1]:= tab[j]
+                j--
+            END_WHILE
+                    tab[j]:=temp;
+            
+        END_FOR
+
+    
+    END
